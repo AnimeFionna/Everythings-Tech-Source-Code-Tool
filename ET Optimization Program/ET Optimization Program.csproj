@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AAA52EF-F4D1-4F29-9584-35F5A20695DC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EtOptimizationProgram</RootNamespace>
+    <AssemblyName>ET Optimization Program</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>ET Optimization Program.ico</ApplicationIcon>
+    <StartupObject>EtOptimizationProgram.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="aboutMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutMessageBox.Designer.cs">
+      <DependentUpon>aboutMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationCrash.cs" />
+    <Compile Include="disclaimerMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="disclaimerMessageBox.Designer.cs">
+      <DependentUpon>disclaimerMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="etOptimizationProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="etOptimizationProgram.Designer.cs">
+      <DependentUpon>etOptimizationProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="okMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="okMessageBox.Designer.cs">
+      <DependentUpon>okMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="optionsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="optionsBox.Designer.cs">
+      <DependentUpon>optionsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="XmlFile.cs" />
+    <Compile Include="yesandnoMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yesandnoMessageBox.Designer.cs">
+      <DependentUpon>yesandnoMessageBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="aboutMessageBox.resources" />
+    <EmbeddedResource Include="disclaimerMessageBox.resources" />
+    <EmbeddedResource Include="etOptimizationProgram.resources" />
+    <EmbeddedResource Include="MainForm.resources" />
+    <EmbeddedResource Include="okMessageBox.resources" />
+    <EmbeddedResource Include="optionsBox.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="yesandnoMessageBox.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
